@@ -7,6 +7,9 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('track', function() {});
+  this.route('moderate');
+  this.route('edit', {path: '/edit/:track_id'});
 });
 
 export default Router;

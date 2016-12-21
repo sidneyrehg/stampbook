@@ -4,6 +4,16 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'thaxton',
     environment: environment,
+    contentSecurityPolicy: {'connect-src': "'self' wss://*.firebaseio.com"},
+    torii: {
+    sessionServiceName: 'session'
+    },
+    firebase: {
+    apiKey: 'AIzaSyCE0GfMu1Y_8GLcz3oKLTi5ZSF3vLAMtj8',
+    authDomain: 'thaxton-ambassadors-club.firebaseapp.com',
+    databaseURL: 'https://thaxton-ambassadors-club.firebaseio.com',
+    storageBucket: 'thaxton-ambassadors-club.appspot.com'
+    },
     rootURL: '/',
     locationType: 'auto',
     EmberENV: {

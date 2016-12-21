@@ -1,0 +1,16 @@
+<h1>MODERATE</h1>
+<div class="moderate-content">
+  <form>
+    <div class="form-group">
+      <label>Title</label>
+      {{input type="text" class="form-control" value=title
+      placeholder= "Add Item..."}}
+    </div>
+    <div class="form-group">
+      <label>Description</label>
+      {{textarea class="form-control" value=description
+      placeholder="Description..."}}
+    </div>
+    <button {{action 'addItem'}} class="btn btn-primary">Submit</button>
+  </form>
+</div>

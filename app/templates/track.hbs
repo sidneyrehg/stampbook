@@ -1,0 +1,12 @@
+<h1>TRACK</h1>
+<div class="todo-count">
+  <strong>{{completeCount}}</strong> of <strong>{{totalCount}}</strong> complete
+</div>
+<div class="track-data">
+  {{#each sortedItems as |track|}}
+    <div class="well {{if track.complete 'complete'}}">
+      <h4>{{#link-to 'edit' track.id}}{{track.title}}{{/link-to}}</h4>
+      <p>{{track.description}}</p>
+    </div>
+  {{/each}}
+</div>

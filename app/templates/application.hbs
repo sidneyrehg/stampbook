@@ -1,0 +1,21 @@
+<div class="header">
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          {{#link-to 'index' class="navbar-brand"}}THAXTON AMBASSADOR'S CLUB{{/link-to}}
+        </div>
+        <div id="navbar" class="nav masthead-nav">
+          <ul class="nav navbar-nav">
+            <li>{{#link-to 'index'}}Home{{/link-to}}</li>
+            <li>{{#link-to 'track'}}Track{{/link-to}}</li>
+            <li>{{#link-to 'moderate'}}Moderate{{/link-to}}</li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+  </div>
+  <div class="app-body">
+    <div class="app-content">
+      {{outlet}}
+    </div>
+  </div>
