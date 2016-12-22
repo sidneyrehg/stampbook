@@ -1,0 +1,11 @@
+{{#if session.isAuthenticated}}
+  <h1>WELCOME</h1>
+  <div class="welcome-user">
+    Logged in as {{session.currentUser.email}}
+  </div>
+{{else}}
+  <h1>LOGIN</h1>
+  {{input value=email placeholder="email address" type="email" class="login-fields"}}
+  {{input type="password" value=password placeholder="password" class="login-fields"}}
+  <button class="sign-in-button btn btn-primary" {{action "signIn" "password" email password}}>Sign in</button>
+{{/if}}

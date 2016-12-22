@@ -10,6 +10,8 @@ Router.map(function() {
   this.route('track', function() {});
   this.route('moderate');
   this.route('edit', {path: '/edit/:track_id'});
+  this.route('login');
+  this.route('new-user');
 });
 
 export default Router;

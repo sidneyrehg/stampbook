@@ -6,9 +6,15 @@
         </div>
         <div id="navbar" class="nav masthead-nav">
           <ul class="nav navbar-nav">
-            <li>{{#link-to 'index'}}Home{{/link-to}}</li>
-            <li>{{#link-to 'track'}}Track{{/link-to}}</li>
-            <li>{{#link-to 'moderate'}}Moderate{{/link-to}}</li>
+            {{#if session.isAuthenticated}}
+              <li>{{#link-to 'track'}}Track{{/link-to}}</li>
+              <li>{{#link-to 'moderate'}}Mod{{/link-to}}</li>
+              <li>{{#link-to 'new-user'}}Add{{/link-to}}</li>
+              <li class="logout-text" {{action "signOut"}}>Logout</li>
+            {{else}}
+              <li>{{#link-to 'login'}}Login{{/link-to}}</li>
+
+            {{/if}}
           </ul>
         </div><!--/.nav-collapse -->
       </div>
