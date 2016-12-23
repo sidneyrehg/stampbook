@@ -1,3 +1,4 @@
+{{#if session.isAuthenticated}}
 <h1>MODERATE</h1>
 <div class="moderate-content">
   <form>
@@ -14,3 +15,9 @@
     <button {{action 'addItem'}} class="btn btn-primary">Submit</button>
   </form>
 </div>
+{{else}}
+  <h1>LOGIN</h1>
+  {{input value=email placeholder="email address" type="email" class="login-fields"}}
+  {{input type="password" value=password placeholder="password" class="login-fields"}}
+  <button class="sign-in-button btn btn-primary" {{action "signIn" "password" email password}}>Sign in</button>
+{{/if}}

@@ -76,7 +76,7 @@ h4 {
 }
 
 .logout-text:hover {
-  color: #fff;
+  color: #fff !important;
   cursor: pointer;
 }
 
