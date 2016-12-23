@@ -22,9 +22,11 @@
   </div>
   <div class="app-body">
     <div class="app-content">
-      <div class="current-user">
-        <h4>Logged in as {{session.currentUser.email}}</h4>
-      </div>
+      {{#if session.isAuthenticated}}
+        <div class="current-user">
+          <h4>Logged in as {{session.currentUser.email}}</h4>
+        </div>
+      {{/if}}
       {{outlet}}
     </div>
   </div>

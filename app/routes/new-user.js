@@ -10,7 +10,21 @@ export default Ember.Route.extend({
       // Handle Errors here.
       var errorCode = error.code;
       var errorMessage = error.message;
-      // ...
+
+      if (errorCode === 'auth/email-already-in-use') {
+        alert('Email already in use for another account');
+      }
+      else if (errorCode ==='auth/invalid-email') {
+        alert('Invalid email address');
+      }
+      else if (errorCode === 'auth/operation-not-allowed') {
+        alert('Operation not allowed. Contact administrator.');
+      }
+      else if (errorCode === 'auth/weak-password') {
+        alert('Password not strong enough. Please choose another password');
+      } else {
+        alert(errorMessage);
+      }
     });
   }
 
