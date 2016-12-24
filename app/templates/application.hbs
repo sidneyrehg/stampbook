@@ -8,8 +8,8 @@
           <ul class="nav navbar-nav">
             <li>{{#link-to 'track'}}Track{{/link-to}}</li>
             {{#if session.isAuthenticated}}
-              <li>{{#link-to 'moderate'}}Mod{{/link-to}}</li>
-              <li>{{#link-to 'new-user'}}Add{{/link-to}}</li>
+              <li>{{#link-to 'moderate'}}Add Drinks{{/link-to}}</li>
+              <li>{{#link-to 'new-user'}}Add Member{{/link-to}}</li>
               <li class="logout-text" {{action "signOut"}}>Logout</li>
             {{else}}
               <li>{{#link-to 'login'}}Login{{/link-to}}</li>

@@ -5,11 +5,13 @@ export default Ember.Controller.extend({
   actions: {
     addProfile: function() {
       var displayName = this.get('displayName');
+      var profileId = this.get('profileId');
       var self = this;
 
       // Create new item
       var newProfile = this.store.createRecord('profile', {
-        dispayName: displayName,
+        displayName: displayName,
+        profileId: profileId,
         completedTracks: ''
       });
 
@@ -18,7 +20,8 @@ export default Ember.Controller.extend({
       console.log('New Profile Added');
       // Clear Form
       this.setProperties({
-        displayName: ''
+        displayName: '',
+        profileId: ''
       });
 
       // Redirect to track route
