@@ -1,0 +1,14 @@
+<h1>NEW MEMBER</h1>
+<div class="moderate-content">
+  <form>
+    <div class="form-group">
+      <label class="new-profile">Username</label>
+      {{input type="text" class="form-control" value=displayName
+      placeholder= "Add Member..."}}
+      <label class="new-profile">Ambassador ID Number</label>
+      {{input type="text" class="form-control" value=profileId
+      placeholder= "Add ID Number..."}}
+    </div>
+    <button {{action 'addProfile'}} class="btn btn-primary">Submit</button>
+  </form>
+</div>

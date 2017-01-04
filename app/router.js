@@ -12,6 +12,7 @@ Router.map(function() {
   this.route('edit', {path: '/edit/:track_id'});
   this.route('login');
   this.route('new-user');
+  this.route('new-profile');
 });
 
 export default Router;

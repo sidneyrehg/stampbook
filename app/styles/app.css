@@ -80,6 +80,10 @@ h4 {
   cursor: pointer;
 }
 
+.new-profile {
+  margin-top: 10px;
+}
+
 @media(min-width: 768px) {
     .logout-text {
       padding-top: 15px;
@@ -188,10 +192,6 @@ h4 {
 
   .navbar-nav > li {
     float: left;
-  }
-
-  .navbar-inverse .navbar-nav > li {
-    padding-top: 0px;
   }
 
   .app-content {
