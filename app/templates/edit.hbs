@@ -3,9 +3,9 @@
   {{model.title}}
 </h1>
 <p class="stamp-count">
-  <button {{action '' model.id}} class="btn btn-danger" id="btn-stampdown">-</button>
+  <button {{action 'stampDown' model.id}} class="btn btn-danger" id="btn-stampdown">-</button>
   {{model.stamps}}
-  <button {{action '' model.id}} class="btn btn-primary" id="btn-stampup">+</button>
+  <button {{action 'stampUp' model.id}} class="btn btn-primary" id="btn-stampup">+</button>
 </p>
 <div class="moderate-content">
   <form>
@@ -31,7 +31,8 @@
     </div>
 
     <button {{action 'editItem' model.id}} class="btn btn-primary">Save</button>
-    <button {{action 'completeItem' model.id}} class="btn btn-warning" id="btn-complete">Complete</button>
+    <!-- Old for product tracking as complete below -->
+    <!-- <button {{action 'completeItem' model.id}} class="btn btn-warning" id="btn-complete">Complete</button> -->
     <button {{action 'deleteItem' model.id}} class="btn btn-danger" id="btn-delete">Delete</button>
 
   </form>

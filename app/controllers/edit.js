@@ -3,6 +3,31 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
 
   actions: {
+
+    stampDown: function(id) {
+      var stamps = this.get('model.stamps');
+
+      stamps--;
+
+      this.store.findRecord('members', id).then(function(members) {
+        members.set('stamps', stamps);
+        members.save();
+      });
+
+    },
+
+    stampUp: function(id) {
+      var stamps = this.get('model.stamps');
+
+      stamps++;
+
+      this.store.findRecord('members', id).then(function(members) {
+        members.set('stamps', stamps);
+        members.save();
+      });
+
+    },
+
     editItem: function(id) {
       var self = this;
       var title = this.get('model.title');
