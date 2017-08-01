@@ -8,12 +8,12 @@ export default Ember.Controller.extend({
       var title = this.get('model.title');
       var description = this.get('model.description');
 
-      this.store.findRecord('track', id).then(function(track) {
-        track.set('title', title);
-        track.set('description', description);
+      this.store.findRecord('members', id).then(function(members) {
+        members.set('title', title);
+        members.set('description', description);
 
-        track.save();
-        self.transitionToRoute('track');
+        members.save();
+        self.transitionToRoute('members');
       });
 
     },
@@ -22,16 +22,16 @@ export default Ember.Controller.extend({
       var self = this;
       var complete = this.get('model.complete');
 
-      this.store.findRecord('track', id).then(function(track) {
+      this.store.findRecord('members', id).then(function(members) {
         if (complete === false) {
-          track.set('complete', true);
+          members.set('complete', true);
         }
         else {
-          track.set('complete', false);
+          members.set('complete', false);
         }
 
-        track.save();
-        self.transitionToRoute('track');
+        members.save();
+        self.transitionToRoute('members');
 
       });
     },
@@ -39,13 +39,13 @@ export default Ember.Controller.extend({
     deleteItem: function(id) {
       var self = this;
 
-      this.store.findRecord('track', id).then(function(track) {
+      this.store.findRecord('members', id).then(function(members) {
 
-        track.deleteRecord();
-        track.get('isDeleted');
+        members.deleteRecord();
+        members.get('isDeleted');
 
-        track.save();
-        self.transitionToRoute('track');
+        members.save();
+        self.transitionToRoute('members');
       });
 
     }

@@ -9,10 +9,10 @@ module.exports = function(environment) {
     sessionServiceName: 'session'
     },
     firebase: {
-    apiKey: 'AIzaSyCE0GfMu1Y_8GLcz3oKLTi5ZSF3vLAMtj8',
-    authDomain: 'thaxton-ambassadors-club.firebaseapp.com',
-    databaseURL: 'https://thaxton-ambassadors-club.firebaseio.com',
-    storageBucket: 'thaxton-ambassadors-club.appspot.com'
+    apiKey: 'AIzaSyBb-9Vu1COEafc_3cBMGedVZxOyDa6i9R0',
+    authDomain: 'stampbook-a0acf.firebaseapp.com',
+    databaseURL: 'https://stampbook-a0acf.firebaseio.com',
+    storageBucket: 'stampbook-a0acf.appspot.com'
     },
     rootURL: '/',
     locationType: 'auto',

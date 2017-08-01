@@ -9,7 +9,7 @@ export default Ember.Controller.extend({
       var self = this;
 
       // Create new item
-      var newItem = this.store.createRecord('track', {
+      var newItem = this.store.createRecord('members', {
         title: title,
         description: description
       });
@@ -23,8 +23,8 @@ export default Ember.Controller.extend({
         description: ''
       });
 
-      // Redirect to track route
-      self.transitionToRoute('track');
+      // Redirect to members route
+      self.transitionToRoute('members');
 
     }
   }

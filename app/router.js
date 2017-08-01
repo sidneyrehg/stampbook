@@ -9,10 +9,10 @@ const Router = Ember.Router.extend({
 Router.map(function() {
   this.route('track', function() {});
   this.route('moderate');
-  this.route('edit', {path: '/edit/:track_id'});
+  this.route('edit', {path: '/edit/:members_id'});
   this.route('login');
   this.route('new-user');
-  this.route('new-profile');
+  this.route('members');
 });
 
 export default Router;

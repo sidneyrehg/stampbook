@@ -26,6 +26,7 @@ export default Ember.Route.extend({
         alert(errorMessage);
       }
     });
+    this.transitionTo('members');
   }
 
 }

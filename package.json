@@ -1,7 +1,7 @@
 {
-  "name": "thaxton",
+  "name": "stambook",
   "version": "0.0.0",
-  "description": "Small description for thaxton goes here",
+  "description": "Small description for stampbook goes here",
   "private": true,
   "directories": {
     "doc": "doc",

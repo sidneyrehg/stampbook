@@ -2,14 +2,13 @@
   <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-          {{#link-to 'index' class="navbar-brand"}}THAXTON AMBASSADOR'S CLUB{{/link-to}}
+          {{#link-to 'index' class="navbar-brand"}}STAMPBOOK{{/link-to}}
         </div>
         <div id="navbar" class="nav masthead-nav">
           <ul class="nav navbar-nav">
-            <li>{{#link-to 'track'}}Track{{/link-to}}</li>
+            <li>{{#link-to 'members'}}Members{{/link-to}}</li>
             {{#if session.isAuthenticated}}
-              <li>{{#link-to 'new-profile'}}Add Member{{/link-to}}</li>
-              <li>{{#link-to 'moderate'}}Add Drinks{{/link-to}}</li>
+              <li>{{#link-to 'moderate'}}Add Member{{/link-to}}</li>
               <li>{{#link-to 'new-user'}}New Admin{{/link-to}}</li>
               <li class="logout-text" {{action "signOut"}}>Logout</li>
             {{else}}
