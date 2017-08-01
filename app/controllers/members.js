@@ -15,7 +15,7 @@ export default Ember.Controller.extend({
   query: null,
   filteredContent: computedFilterByQuery(
       'sortedItems',
-      ['title', 'email', 'description', 'stamps'],
+      ['title', 'email'],
       'query',
       { conjunction: 'and', sort: false}
     ),
