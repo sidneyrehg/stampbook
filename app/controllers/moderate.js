@@ -6,14 +6,16 @@ export default Ember.Controller.extend({
     addItem: function() {
       var title = this.get('title');
       var email = this.get('email');
+      var stamps = this.get('stamps');
       var description = this.get('description');
       var self = this;
 
       // Create new item
       var newItem = this.store.createRecord('members', {
         title: title,
+        email: email,
         description: description,
-        email: email
+        stamps: stamps
       });
 
       // Save to Database
@@ -23,7 +25,8 @@ export default Ember.Controller.extend({
       this.setProperties({
         title: '',
         description: '',
-        email: ''
+        email: '',
+        stamps: ''
       });
 
       // Redirect to members route
