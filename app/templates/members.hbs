@@ -1,10 +1,11 @@
 <h1>MEMBERS</h1>
 <div class="todo-count">
   <strong>{{totalCount}}</strong> members
+  {{input type="text" value=query placeholder="Filter Posts" autofocus="autofocus" key-press="resetPage"}}
 </div>
 {{#if session.isAuthenticated}}
 <div class="track-data">
-  {{#each sortedItems as |members|}}
+  {{#each filteredContent as |members|}}
     <div class="well {{if members.complete 'complete'}}">
       <h4>{{#link-to 'edit' members.id}}{{members.title}}{{/link-to}}</h4>
       <p>{{members.email}}</p>
