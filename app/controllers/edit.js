@@ -13,7 +13,7 @@ export default Ember.Controller.extend({
       this.store.findRecord('members', id).then(function(members) {
         members.set('title', title);
         members.set('email', email);
-        member.set('stamps', stamps);
+        members.set('stamps', stamps);
         members.set('description', description);
 
         members.save();
