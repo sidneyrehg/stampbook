@@ -2,6 +2,7 @@
 <h1>
   {{model.title}}
 </h1>
+<p class="stamp-count">{{model.stamps}}</p>
 <div class="moderate-content">
   <form>
     <div class="form-group">
@@ -27,8 +28,8 @@
   </form>
 </div>
 {{else}}
-  <h1>LOGIN</h1>
-  {{input value=email placeholder="email address" type="email" class="login-fields"}}
-  {{input type="password" value=password placeholder="password" class="login-fields"}}
-  <button class="sign-in-button btn btn-primary" {{action "signIn" "password" email password}}>Sign in</button>
+  <h1>
+    {{model.title}}
+  </h1>
+  <p class="stamp-count">Current Points: {{model.stamps}}</p>
 {{/if}}

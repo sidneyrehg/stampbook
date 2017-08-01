@@ -15,7 +15,7 @@
 <div class="track-data">
   {{#each sortedItems as |members|}}
     <div class="well {{if members.complete 'complete'}}">
-      <h4>{{members.title}}</h4>
+      <h4>{{#link-to 'edit' members.id}}{{members.title}}{{/link-to}}</h4>
     </div>
   {{/each}}
 </div>
