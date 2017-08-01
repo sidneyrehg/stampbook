@@ -3,7 +3,7 @@ body {
 }
 
 p {
-  padding: 0 2% 1% 2%;
+  padding: 0%;
   color: #444;
 }
 
@@ -29,6 +29,7 @@ h4 {
 .well {
   margin: 2%;
   width: 100%;
+  padding: 1% 0% 0% 1%;
 }
 
 .well.complete {

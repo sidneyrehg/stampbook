@@ -6,10 +6,12 @@ export default Ember.Controller.extend({
     editItem: function(id) {
       var self = this;
       var title = this.get('model.title');
+      var email = this.get('model.email');
       var description = this.get('model.description');
 
       this.store.findRecord('members', id).then(function(members) {
         members.set('title', title);
+        members.set('email', email);
         members.set('description', description);
 
         members.save();
